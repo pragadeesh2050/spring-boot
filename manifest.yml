@@ -3,6 +3,7 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
+  path: build/libs/spring-boot-0.0.1-SNAPSHOT.jar
   routes:
   - route: spring-boot-001-snapshot.cfapps.io
   stack: cflinuxfs3
