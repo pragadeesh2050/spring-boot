@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @CrossOrigin
 @RestController
@@ -21,7 +22,8 @@ public class UserController {
     }
 
     @GetMapping("/users/{Id}")
-    public User GetSingleUser(@PathVariable("Id") int UserID){
+    public User GetSingleUser(@PathVariable("Id") int UserID) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(120);
         return this.Users.get(UserID - 1);
     }
 
